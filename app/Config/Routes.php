@@ -11,8 +11,6 @@ $routes->match(['get','post'], '/add_to_cart', 'Home::add_to_cart');
 $routes->match(['get','post'], '/checkout', 'Home::checkout');
 $routes->match(['get','post'], '/test', 'Home::test');
 
-
-
 $routes->group('', ['filter' => 'AuthCheck'], function ($routes) {
     $routes->match(['get','post'],'/admin/dashboard', 'Admin\Dashboard::index');
     $routes->get('admin/logout', 'Admin\Auth::logout');
