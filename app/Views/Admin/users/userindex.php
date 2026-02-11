@@ -1,18 +1,33 @@
 <?=$this->extend("admin/_layouts/master") ?>
 <?=$this->section("content") ?>
     <div class="content-wrapper">
+        <div class="page-header">
+            <h3 class="page-title">
+            <!-- <span class="page-title-icon bg-gradient-primary text-white me-2">
+            <i class="mdi mdi-home"></i>
+            </span> --> User List
+            </h3>
+            <nav aria-label="breadcrumb">
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item active" aria-current="page">
+                <a href="<?=base_url('admin/add_user')?>" class="btn btn-primary">Add User</a>
+                </li>
+            </ul>
+            </nav>
+        </div>
+        <?php if(session()->getFlashdata('message')){ ?>
+        <div class="alert alert-<?=session()->getFlashdata('type')?>">
+            <?=session()->getFlashdata('message')?>
+        </div>
+        <?php } ?>
         <div class="card">
-            <div class="card-header">
+            <?php /* <div class="card-header">
                 <div class="d-flex justify-content-between">
                     <h4>User List</h4>
                     <a href="<?=base_url('admin/add_user')?>" class="btn btn-primary">Add User</a>
                 </div>
-                <?php if(session()->getFlashdata('message')){ ?>
-                <div class="alert alert-<?=session()->getFlashdata('type')?>">
-                    <?=session()->getFlashdata('message')?>
-                </div>
-                <?php } ?>
-            </div>
+                
+            </div> */ ?>
             <div class="table-responsive">
             <table class="table table-bordered">
             <thead>

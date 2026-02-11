@@ -20907,7 +20907,7 @@ code {
 }
 
 .page-header {
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 0.5rem 0;
 }
 .page-header .breadcrumb {
   border: 0;
@@ -26281,7 +26281,7 @@ dl li {
 
 .content-wrapper {
   background: #f2edf3;
-  padding: 2.75rem 2.25rem;
+  padding: 0.5rem 1.25rem;
   width: 100%;
   -webkit-flex-grow: 1;
   flex-grow: 1;
