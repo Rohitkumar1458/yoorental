@@ -31,6 +31,8 @@ class CommonModel extends Model
         }
         $query = $builder->get();
 
+        // echo $this->db->getLastQuery(); exit;
+
         $result = $query->getResult();
         // echo '<pre>';print_r($result); exit;
         return $result;

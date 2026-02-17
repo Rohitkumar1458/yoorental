@@ -53,7 +53,7 @@
                 
                 <tr>
                     <td><?=$n++;?></td>
-                    <td><img src="<?=base_url('public/assets/upload/users/'.$list->image)?>" alt="image" width="60px" height="60px"></td>
+                    <td><img src="<?=base_url(DP_PATH.$list->image)?>" alt="image" width="60px" height="60px"></td>
                     <td><?=$list->name?></td>
                     <td><?=$list->email?></td>
                     <td><?=$list->phone?></td>
