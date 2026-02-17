@@ -18,7 +18,7 @@ class Users extends BaseController
     public function index()
     {
         $data = [];
-        $data['users'] = $this->commonmodel->getAllRecord('tbl_admin',['status !='=>2],['user_id','DESC']);
+        $data['users'] = $this->commonmodel->getAllRecord('tbl_admin','',['user_id','DESC']);
         return view('Admin/users/userindex', $data);
     }
     public function add_user(){

@@ -45,9 +45,9 @@
                 <?php if(!empty($users)){
                 $n = 1;
                 foreach($users as $list){ 
-                $status = '<span class="badge badge-opacity-danger">Inactive</span>';
+                $status = '<span class="badge badge-gradient-warning">Inactive</span>';
                 if($list->status){
-                    $status = '<span class="badge badge-opacity-success">Active</span>';
+                    $status = '<span class="badge badge-gradient-success">Active</span>';
                 }
                 ?>
                 
