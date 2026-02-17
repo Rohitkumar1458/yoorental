@@ -1,0 +1,15 @@
+# CI4 writable folder
+/writable/
+
+# Environment file
+.env
+
+# Composer vendor folder
+/vendor/
+
+# System logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
