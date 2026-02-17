@@ -6,6 +6,7 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 $routes->get('/', 'Home::index');
+$routes->get('/contact', 'Home::contact');
 $routes->get('/product/(:any)', 'Home::product_details/$1');
 $routes->match(['get','post'], '/add_to_cart', 'Home::add_to_cart');
 $routes->match(['get','post'], '/checkout', 'Home::checkout');

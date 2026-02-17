@@ -17,6 +17,10 @@ class Home extends BaseController
         // return view('home', $data);
         return view('welcome_message');
     }
+    public function contact(){
+        $data['title'] = 'I am contact page, i am coming from controller';
+        return view('contact', $data);
+    }
     public function product_details($url){
         $data['product'] = $this->commonmodel->getOneRecord('tbl_product',['url'=>$url]);
         echo "<pre>"; print_r($data['product']); exit;
