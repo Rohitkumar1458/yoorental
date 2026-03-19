@@ -88,6 +88,9 @@
       <div class="collapse" id="auth">
         <ul class="nav flex-column sub-menu">
           <li class="nav-item">
+            <a class="nav-link" href="<?=base_url('admin/user-group') ?>"> User Group</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="<?=base_url('admin/users') ?>"> Users List</a>
           </li>
           <li class="nav-item">
