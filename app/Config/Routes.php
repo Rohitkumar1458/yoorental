@@ -12,6 +12,12 @@ $routes->match(['get','post'], '/add_to_cart', 'Home::add_to_cart');
 $routes->match(['get','post'], '/checkout', 'Home::checkout');
 $routes->match(['get','post'], '/test', 'Home::test');
 
+/**************************Fro Testing************************************** */
+$routes->match(['get','post'], '/testpdf', 'Test::test_pdf');
+$routes->match(['get','post'], '/exportexcel', 'Test::exportExcel');
+
+/**************************************************************************** */
+
 $routes->group('', ['filter' => 'AuthCheck'], function ($routes) {
     $routes->match(['get','post'],'/admin/dashboard', 'Admin\Dashboard::index');
     $routes->get('admin/logout', 'Admin\Auth::logout');
