@@ -15,6 +15,9 @@ $routes->match(['get','post'], '/test', 'Home::test');
 /**************************Fro Testing************************************** */
 $routes->match(['get','post'], '/testpdf', 'Test::test_pdf');
 $routes->match(['get','post'], '/exportexcel', 'Test::exportExcel');
+$routes->match(['get','post'], '/create-order', 'Home::createOrder');
+$routes->match(['get','post'], '/capture-order', 'Home::captureOrder');
+
 
 /**************************************************************************** */
 

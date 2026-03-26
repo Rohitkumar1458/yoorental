@@ -72,6 +72,54 @@
   </div>
 </div>
 
+<script src="https://www.paypal.com/sdk/js?client-id=<?= getenv('PAYPAL_CLIENT_ID') ?>"></script>
+
+<div id="paypal-button"></div>
+
+<script>
+  const csrfName = '<?= csrf_token() ?>';
+  const csrfHash = '<?= csrf_hash() ?>';
+  
+  paypal.Buttons({
+      fundingSource: paypal.FUNDING.CARD, 
+      createOrder: function() {
+          return fetch('<?=base_url('/create-order') ?>', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({
+                [csrfName]: csrfHash
+              })
+          })
+          .then(res => res.json())
+          .then(data => data.id);
+      },
+
+      onApprove: function(data) {
+          
+          return fetch('<?=base_url('/capture-order') ?>', {
+              method: 'POST',
+              headers: {'Content-Type': 'application/json'},
+              body: JSON.stringify({
+                  orderID: data.orderID,
+                  
+              })
+          })
+          .then(res => res.json())
+          .then(res => {
+            console.log(res);
+              if(res.status === 'success'){
+                  alert("✅ Payment Success");
+              } else {
+                  alert("❌ Failed");
+              }
+          });
+      }
+
+  }).render('#paypal-button');
+</script>
+
 
 
   <?php /* <!-- Bootstrap JS Bundle -->
