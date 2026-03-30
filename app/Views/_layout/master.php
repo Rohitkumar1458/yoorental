@@ -16,6 +16,7 @@
   <nav class="navbar navbar-dark bg-dark mb-4">
     <div class="container-fluid d-flex justify-content-between">
       <span class="navbar-brand mb-0 h1">My eCommerce Store</span>
+      <a href="<?=base_url('contact')?>">Contact</a>
       <div class="cart-icon me-3">
         🛒
         <?php $cartCount = cart()->totalItems(); 
